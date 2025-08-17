@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input with Buttons</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+     
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title text-center mb-4">Input Control</h5>
+
+                        <!-- Full width input textbox -->
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="textInput"
+                                placeholder="Enter your text here...">
+                        </div>
+
+                        <!-- Buttons container -->
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                            <button class="btn btn-success me-md-2" type="button" id="startBtn">Start</button>
+                            <button class="btn btn-danger" type="button" id="stopBtn">Stop</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+   <script type="module">
+        import typing from './js/typing.js';
+        const { startTyping, stopTyping } = typing;
+        
+        // Add event listeners after DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('startBtn').addEventListener('click', startTyping);
+            document.getElementById('stopBtn').addEventListener('click', stopTyping);
+        });
+    </script>
+
+</body>
+
+</html>
