@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>The forEach() Method</h2>
+
+<p>Call a function once for each array element:</p>
+
+<p id="demo"></p>
+
+<script>
+const numbers = [45, 4, 9, 16, 25];
+
+let txt = "";
+console.log(numbers);
+
+console.log("Loop start here")
+// for (let i = 0; i < numbers.length; i++){
+//     console.log(numbers[i]);
+// }
+let sum =0
+numbers.forEach((value,index)=>{
+console.log(value,index);
+sum += parseInt(value);
+
+});
+console.log("Sum=",sum)
+console.log("Loop start here")
+numbers.forEach(showData);
+console.log("Loop start here")
+showdata1 = (value,index)=>{
+     console.log(value,index)
+}
+numbers.forEach(showdata1);
+document.getElementById("demo").innerHTML = txt;
+
+
+
+function showData(value,index){
+    console.log(value,index)
+}
+
+
+
+const numbers1 = [45, 4, 9, 16, 25];
+const numbers2 = numbers1.map(myFunction);
+
+function myFunction(value, index, array) {
+  return value + 2;
+}
+
+console.log(numbers2,numbers1);
+</script>
+
+</body>
+</html>

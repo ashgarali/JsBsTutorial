@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const numbers = [45, 4, 9, 16, 25];
+        console.log(numbers)
+        const even = numbers.filter((item) => {
+            console.log(item)
+            return item % 2 === 0;
+        });
+        const odd = numbers.filter((item) => { return item % 2 !== 0 });
+
+        console.log("Even", even)
+        console.log("Odd", odd)
+    </script>
+
+    <script>
+        const numbers1 = [45, 4, 9, 16, 25];
+        let sum = numbers1.reduce(myFunction,100);
+
+        console.log("The sum is " + sum);
+
+        function myFunction(total, value) {
+            console.log("total",total);
+            return total + value;
+        }
+    </script>
+
+    <script>
+        const numbers3 = [40, 4, 10, 16, 26];
+        let status = numbers3.includes(25);
+
+        console.log("index",numbers3.indexOf(10));
+        console.log("status",status);
+
+        if(!status){
+            numbers3.push(25);
+        }
+        console.log(numbers3.join('*'));
+        
+    </script>
+</body>
+
+</html>
